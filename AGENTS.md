@@ -14,8 +14,8 @@ Use Git Flow:
 
 - `main`: released code.
 - `develop`: integration branch for the next release.
-- `codex/feature/*`: branch from `develop`, merge back into `develop` through a pull request.
-- `codex/release/*`: branch from `develop` for release preparation, merge into `main` and `develop`, and tag the release on `main`.
-- `codex/hotfix/*`: branch from `main` for urgent release fixes, merge into `main` and `develop`, and tag the release on `main`.
+- `feature/*`: branch from `develop`, merge back into `develop` through a pull request.
+- `release/*`: branch from `develop` for release preparation, merge into `main` and `develop`, and tag the release on `main`.
+- `hotfix/*`: branch from `main` for urgent release fixes, merge into `main` and `develop`, and tag the release on `main`.
 
 Do not implement features directly on `main` or `develop`.
