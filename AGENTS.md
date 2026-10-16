@@ -8,14 +8,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## Branch strategy
+## Contribution guidelines
 
-Use Git Flow:
-
-- `main`: released code.
-- `develop`: integration branch for the next release.
-- `feature/*`: branch from `develop`, merge back into `develop` through a pull request.
-- `release/*`: branch from `develop` for release preparation, merge into `main` and `develop`, and tag the release on `main`.
-- `hotfix/*`: branch from `main` for urgent release fixes, merge into `main` and `develop`, and tag the release on `main`.
-
-Do not implement features directly on `main` or `develop`.
+Follow [CONTRIBUTING.md](CONTRIBUTING.md) for Git Flow, Issue/PR conventions, validation, and handling public information.
