@@ -2,6 +2,8 @@
 
 AI SDKとVertex AIで、エージェントのループ・ツール設計・確認用UIを試すMVPです。公開用の架空の店舗記事だけを扱います。
 
+開発手順・Issue/PRの書き方は[CONTRIBUTING.md](CONTRIBUTING.md)を参照してください。
+
 ## 起動
 
 Node.js 22以上、npm、Google Cloud CLIを使用します。
