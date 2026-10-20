@@ -8,3 +8,4 @@ next-env.d.ts
 credentials*.json
 service-account*.json
 .DS_Store
+eval-results/
