@@ -57,6 +57,20 @@ npm run build
 
 自動テストは架空データの検索・取得と、実モデルを呼ばないループ検証を対象にします。実際のVertex AIの回答品質やツール選択は、認証を設定して上の3ケースで確認してください。
 
-ローカル検証用のMVPです。認証付きの公開API、永続化、中断後の再開、体系的な評価、運用監視は対象外です。
+ローカル検証用のMVPです。認証付きの公開API、永続化、中断後の再開、運用監視は対象外です。
+
+## エージェントの評価
+
+固定の質問で、回答とツール利用を繰り返し確認できます。手順と判定の限界は[評価ガイド](evals/README.md)を参照してください。
+
+```sh
+# ケース一覧と実行方法を表示（API呼び出しなし）
+npm run eval
+
+# Vertex AIで4ケースを順番に実行（利用料金が発生）
+npm run eval -- --live
+```
+
+結果はGit管理対象外の`eval-results/`にJSONで保存します。
 
 参考: [Agents](https://ai-sdk.dev/docs/agents/overview) / [Vertex AI provider](https://ai-sdk.dev/providers/ai-sdk-providers/google-vertex)
