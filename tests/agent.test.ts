@@ -1,7 +1,10 @@
 import { strict as assert } from "node:assert";
 import { test } from "node:test";
 import { MockLanguageModelV4 } from "ai/test";
-import { createDocumentAgent, MAX_STEPS } from "../lib/agent";
+import type { LanguageModel } from "ai";
+import { createDocumentAgent as createAgent, MAX_STEPS } from "../lib/agent";
+
+const createDocumentAgent = (model?: LanguageModel, ids?: string[]) => createAgent(model, ids, { requireReadApproval: false });
 
 const usage = {
   inputTokens: { total: 10, noCache: 10, cacheRead: 0, cacheWrite: 0 },

@@ -122,3 +122,11 @@ button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); 
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (max-width: 760px) { .conversation-layout { margin-top: 0; } .conversation-layout .chat { min-height: 72dvh; } .source-picker { padding: 12px; } .source-heading > span { font-size: 9px; } .conversation-note { text-align: left; } }
 @media (prefers-reduced-motion: reduce) { .active .tool-indicator { animation: none; } }
+.approval-card { margin: 14px 0; padding: 18px; border: 1px solid #bfc5b1; border-radius: 7px; background: #f3f4ec; }
+.approval-label { color: #626c50; font-size: 10px; letter-spacing: .05em; }
+.approval-card > p { font-size: 13px; margin: 8px 0; }
+.approval-card > .muted { font-size: 11px; }
+.approval-card details { margin: 12px 0; }
+.approval-card summary, .approval-card code { font-size: 10px; color: var(--muted); }
+.approval-card pre { margin-top: 6px; }
+.approval-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }

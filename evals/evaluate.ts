@@ -34,7 +34,8 @@ export function assess(testCase: EvalCase, result: AgentResult) {
 
 export async function evaluateCase(testCase: EvalCase, model?: LanguageModel) {
   const started = performance.now();
-  const result = await createDocumentAgent(model, testCase.documentIds).generate({
+  // Batch evaluations explicitly exercise retrieval without an interactive approval UI.
+  const result = await createDocumentAgent(model, testCase.documentIds, { requireReadApproval: false }).generate({
     prompt: testCase.question, abortSignal: AbortSignal.timeout(55_000),
   });
   return { caseId: testCase.id, question: testCase.question, documentIds: testCase.documentIds, elapsedMs: Math.round(performance.now() - started), ...assess(testCase, result) };
