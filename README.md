@@ -46,10 +46,13 @@ npm run dev
 
 ## 構成
 
-- `lib/agent.ts`: Vertex AI、指示、2つのツール、ループ上限
+- `lib/agent.ts`: Vertex AIとエージェントの組み立て
+- `lib/agent-config.ts`: 指示と共通のステップ上限
+- `lib/document-tools.ts`: 検索・本文取得ツールと参照範囲・承認の設定
 - `lib/documents.ts`: 架空記事、キーワード検索、本文取得
 - `app/api/chat/route.ts`: 入力検証とUIストリームのAPI
 - `app/page.tsx`: 質問、回答、実行トレース、サンプル記事
+- `app/components/`: 会話メッセージ、ツール実行・承認カード、参照記事選択の表示
 
 検索はキーワードの部分一致です。ベクトル検索は使っていません。検索結果は概要だけを返し、本文は別のツールで取得します。外部ファイルや実際の社内データは読みません。回答はプレーンテキストで表示します。
 
