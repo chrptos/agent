@@ -7,6 +7,7 @@ import {
   lastAssistantMessageIsCompleteWithApprovalResponses,
 } from "ai";
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowUpIcon, PlusIcon, SquareIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -114,6 +115,7 @@ export default function Page() {
           <h1 className="flex items-center gap-3 text-lg font-semibold tracking-tight">
             Agent Lab<Badge variant="outline">Preview</Badge>
           </h1>
+          <Link href="/lab" className="mt-1 block text-xs text-muted-foreground underline underline-offset-4">7種類の実装を比較する ↗</Link>
         </div>
         <Button variant="outline" disabled={busy} onClick={resetConversation}>
           <PlusIcon />
