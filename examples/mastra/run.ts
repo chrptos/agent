@@ -1,9 +1,9 @@
 import { Agent } from "@mastra/core/agent";
 import { createTool } from "@mastra/core/tools";
 import { createVertex } from "@ai-sdk/google-vertex";
-import { MAX_STEPS } from "../agent-config";
-import { createRunContext, vertexConfig } from "./shared";
-import type { RunInput } from "./types";
+import { MAX_STEPS } from "../../lib/agent-config";
+import { createRunContext, vertexConfig } from "../shared/context";
+import type { RunInput } from "../shared/types";
 
 export async function runMastra(input: RunInput, model?: ReturnType<ReturnType<typeof createVertex>>) {
   const config = vertexConfig();

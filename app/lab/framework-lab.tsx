@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { frameworks, type FrameworkId } from "@/lib/lab/catalog";
-import type { LabResult } from "@/lib/lab/types";
+import { frameworks, type FrameworkId } from "@/examples/shared/catalog";
+import type { LabResult } from "@/examples/shared/types";
 import { documents } from "@/lib/documents";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";

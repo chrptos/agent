@@ -1,7 +1,7 @@
 import { ChatVertexAI } from "@langchain/google-vertexai";
 import { tool } from "@langchain/core/tools";
 import type { BaseChatModel } from "@langchain/core/language_models/chat_models";
-import { createRunContext, vertexConfig } from "./shared";
+import { createRunContext, vertexConfig } from "./context";
 import type { RunInput } from "./types";
 
 export function createLangChainContext(input: RunInput, injectedModel?: BaseChatModel) {

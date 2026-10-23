@@ -1,7 +1,7 @@
 import { FunctionTool, Gemini, InMemoryRunner, LlmAgent, isFinalResponse, type BaseLlm } from "@google/adk";
-import { MAX_STEPS } from "../agent-config";
-import { createRunContext, vertexConfig } from "./shared";
-import type { RunInput } from "./types";
+import { MAX_STEPS } from "../../lib/agent-config";
+import { createRunContext, vertexConfig } from "../shared/context";
+import type { RunInput } from "../shared/types";
 
 export async function runAdk(input: RunInput, model?: BaseLlm) {
   const config = vertexConfig();

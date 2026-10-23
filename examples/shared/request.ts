@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { frameworks } from "./catalog";
-import { documents } from "../documents";
+import { documents } from "../../lib/documents";
 
 export const labRequestSchema = z.object({
   framework: z.enum(frameworks.map(item => item.id)),

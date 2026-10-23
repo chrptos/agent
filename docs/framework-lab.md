@@ -18,15 +18,19 @@
 
 ## 実装
 
+各サンプルは`examples/<SDK名>/`に分かれており、実装の`run.ts`と試し方の`README.md`を置いています。
+共通処理は`examples/shared/`、比較画面は`app/lab/`、APIは`app/api/lab/`です。
+全体の入口は[サンプル一覧](../examples/README.md)を参照してください。
+
 | 実装 | ファイル | ライブラリに任せる処理 |
 | --- | --- | --- |
-| Google Gen AI SDK | `lib/lab/google.ts` | Geminiへの接続。関数呼び出しの往復はアプリが実装 |
-| Vercel AI SDK | `lib/lab/ai-sdk.ts` | `ToolLoopAgent`によるモデルとツールのループ |
-| Google ADK | `lib/lab/adk.ts` | `LlmAgent`、`FunctionTool`、`InMemoryRunner`による実行とイベント |
-| Mastra | `lib/lab/mastra.ts` | `Agent`、`createTool`による実行。Vertex接続にはAI SDKのproviderを利用 |
-| LangGraph | `lib/lab/langgraph.ts` | `StateGraph`によるモデル・ツールノードと条件分岐 |
-| LlamaIndex | `lib/lab/llamaindex.ts` | 文書化、分割、ベクトル索引、上位3チャンクの検索。Embeddingと回答生成にはGoogle Gen AI SDKを接続 |
-| LangChain | `lib/lab/langchain.ts` | `createAgent`の標準ループ。内部でLangGraphを使用 |
+| Google Gen AI SDK | [`examples/google-genai/run.ts`](../examples/google-genai/run.ts) | Geminiへの接続。関数呼び出しの往復はアプリが実装 |
+| Vercel AI SDK | [`examples/ai-sdk/run.ts`](../examples/ai-sdk/run.ts) | `ToolLoopAgent`によるモデルとツールのループ |
+| Google ADK | [`examples/adk/run.ts`](../examples/adk/run.ts) | `LlmAgent`、`FunctionTool`、`InMemoryRunner`による実行とイベント |
+| Mastra | [`examples/mastra/run.ts`](../examples/mastra/run.ts) | `Agent`、`createTool`による実行。Vertex接続にはAI SDKのproviderを利用 |
+| LangGraph | [`examples/langgraph/run.ts`](../examples/langgraph/run.ts) | `StateGraph`によるモデル・ツールノードと条件分岐 |
+| LlamaIndex | [`examples/llamaindex/run.ts`](../examples/llamaindex/run.ts) | 文書化、分割、ベクトル索引、上位3チャンクの検索。Embeddingと回答生成にはGoogle Gen AI SDKを接続 |
+| LangChain | [`examples/langchain/run.ts`](../examples/langchain/run.ts) | `createAgent`の標準ループ。内部でLangGraphを使用 |
 
 共有するものは、架空の店舗記事、記事の参照範囲、検索・取得関数、回答指示、Vertex AIの設定。
 LlamaIndex以外はキーワード検索→本文取得をモデルが選択する。最大6回を目安にモデルの往復を制限する。

@@ -1,6 +1,6 @@
-import { labRequestSchema } from "@/lib/lab/request";
-import { runFramework } from "@/lib/lab/run";
-import { vertexConfig } from "@/lib/lab/shared";
+import { labRequestSchema } from "@/examples/shared/request";
+import { runFramework } from "@/examples/shared/run";
+import { vertexConfig } from "@/examples/shared/context";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;

@@ -1,8 +1,8 @@
 import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
-import { frameworks } from "../lib/lab/catalog";
+import { frameworks } from "../examples/shared/catalog";
 import { documents } from "../lib/documents";
-import { runFramework } from "../lib/lab/run";
+import { runFramework } from "../examples/shared/run";
 
 if (existsSync(".env.local")) process.loadEnvFile(".env.local");
 const args = process.argv.slice(2);

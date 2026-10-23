@@ -3,13 +3,13 @@ import type { LabRunner, RunInput } from "./types";
 
 // Load only the selected runtime on the server.
 const runners: Record<FrameworkId, () => Promise<LabRunner>> = {
-  google: async () => (await import("./google")).runGoogle,
-  "ai-sdk": async () => (await import("./ai-sdk")).runAiSdk,
-  adk: async () => (await import("./adk")).runAdk,
-  mastra: async () => (await import("./mastra")).runMastra,
-  langgraph: async () => (await import("./langgraph")).runLangGraph,
-  llamaindex: async () => (await import("./llamaindex")).runLlamaIndex,
-  langchain: async () => (await import("./langchain")).runLangChain,
+  google: async () => (await import("../google-genai/run")).runGoogle,
+  "ai-sdk": async () => (await import("../ai-sdk/run")).runAiSdk,
+  adk: async () => (await import("../adk/run")).runAdk,
+  mastra: async () => (await import("../mastra/run")).runMastra,
+  langgraph: async () => (await import("../langgraph/run")).runLangGraph,
+  llamaindex: async () => (await import("../llamaindex/run")).runLlamaIndex,
+  langchain: async () => (await import("../langchain/run")).runLangChain,
 };
 
 export async function runFramework(framework: FrameworkId, input: RunInput) {

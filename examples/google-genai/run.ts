@@ -1,12 +1,8 @@
-import { GoogleGenAI, type Content, type Part } from "@google/genai";
-import { MAX_STEPS } from "../agent-config";
-import { createRunContext, vertexConfig } from "./shared";
-import type { RunInput } from "./types";
-
-export function createGoogleClient() {
-  const { project, location } = vertexConfig();
-  return new GoogleGenAI({ vertexai: true, project, location });
-}
+import type { GoogleGenAI, Content, Part } from "@google/genai";
+import { MAX_STEPS } from "../../lib/agent-config";
+import { createRunContext, vertexConfig } from "../shared/context";
+import type { RunInput } from "../shared/types";
+import { createGoogleClient } from "../shared/google-client";
 
 // Kept separate so the direct SDK's application-owned loop can be tested.
 export async function runGoogle(input: RunInput, client: { models: Pick<GoogleGenAI["models"], "generateContent"> } = createGoogleClient()) {

@@ -1,8 +1,8 @@
 import { BaseEmbedding, Document, MetadataMode, SentenceSplitter, Settings, VectorStoreIndex } from "llamaindex";
-import { createGoogleClient } from "./google";
+import { createGoogleClient } from "../shared/google-client";
 import type { GoogleGenAI } from "@google/genai";
-import { createRunContext, vertexConfig } from "./shared";
-import type { RunInput } from "./types";
+import { createRunContext, vertexConfig } from "../shared/context";
+import type { RunInput } from "../shared/types";
 
 // Use the same Vertex credentials and a configurable current embedding model.
 // No global Settings mutation: withEmbedModel scopes this model to one request.

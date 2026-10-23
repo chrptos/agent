@@ -1,10 +1,10 @@
 import { Annotation, StateGraph, START, END } from "@langchain/langgraph";
 import { messagesStateReducer } from "@langchain/langgraph";
 import { AIMessage, HumanMessage, SystemMessage, ToolMessage, type BaseMessage } from "@langchain/core/messages";
-import { MAX_STEPS } from "../agent-config";
+import { MAX_STEPS } from "../../lib/agent-config";
 import type { BaseChatModel } from "@langchain/core/language_models/chat_models";
-import { createLangChainContext } from "./langchain-shared";
-import type { RunInput } from "./types";
+import { createLangChainContext } from "../shared/langchain";
+import type { RunInput } from "../shared/types";
 
 const State = Annotation.Root({
   messages: Annotation<BaseMessage[]>({ reducer: messagesStateReducer, default: () => [] }),

@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { documents, readDocument, searchDocuments } from "../documents";
-import { createInstructions } from "../agent-config";
+import { documents, readDocument, searchDocuments } from "../../lib/documents";
+import { createInstructions } from "../../lib/agent-config";
 import type { RunInput, Trace } from "./types";
 
 export const searchSchema = z.object({ query: z.string().trim().min(1).max(100) });
