@@ -4,6 +4,12 @@ AI SDKとVertex AIで、エージェントのループ・ツール設計・確�
 
 開発手順・Issue/PRの書き方は[CONTRIBUTING.md](CONTRIBUTING.md)を参照してください。
 
+## 7種類の実装を比較する
+
+起動後に <http://localhost:3000/lab> を開くと、Google Gen AI SDK、Vercel AI SDK、Google ADK、Mastra、LangGraph、LlamaIndex、LangChainで同じ店舗記事に質問できます。回答・取得した記事・実行履歴を実装ごとに確認できます。
+セットアップと実装の違い、検証方法は[比較アプリのガイド](docs/framework-lab.md)を参照してください。
+各実装は[`examples/`](examples/README.md)のSDK別ディレクトリにあり、それぞれのREADMEから実装と試し方を確認できます。
+
 ## 起動
 
 Node.js 22以上、npm、Google Cloud CLIを使用します。
