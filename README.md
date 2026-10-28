@@ -10,6 +10,8 @@ AI SDKとVertex AIで、エージェントのループ・ツール設計・確�
 セットアップと実装の違い、検証方法は[比較アプリのガイド](docs/framework-lab.md)を参照してください。
 各実装は[`examples/`](examples/README.md)のSDK別ディレクトリにあり、それぞれのREADMEから実装と試し方を確認できます。
 
+SDK・フレームワークの選び方は[ADR 0001: AI SDK・フレームワークの選定指針](adr/0001-ai-framework-selection.md)を参照してください。
+
 ## 起動
 
 Node.js 22以上、npm、Google Cloud CLIを使用します。
